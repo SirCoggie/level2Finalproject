@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>trend finder</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <!-- font for trendfinder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Datatype:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <style></style>
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        
+        <div id="navbar">
+
+            <p id="trendfinder">TrendFinder</p>
+
+            <div class="search-options">
+
+                <a href="lv2_finalProject.html">
+                <p id="google-btn" class="option-btn active">Google</p>
+                </a>
+
+                <a href="lv2_final_sub.html">
+                <p id="youtube-btn" class="option-btn">youtube</p>
+                </a>
+                
+            </div>
+
+            <button class="toggle-switch">
+                <i id="theme-toggle" class="fa-regular fa-lightbulb"></i>
+            </button>
+
+        </div>
+
+            <p id="question">Find which country have the words searched most!</p>
+
+        <main>
+            <p>Search Your words!</p>
+            <form id="search_word">
+                <input id="searchInput" type="text" autocomplete="off">
+                <button class="search-engine" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        
+        </main>
+
+        <div class="content-wrapper">
+            <div class="autoshow">
+                <p class="intro">Ranking is...</p>
+                <!-- <p class="rank">#1 korea</p>
+                <p class="rank">#2 china</p>
+                <p class="rank">#3 America</p>
+                <p class="rank">#4 Japan</p> -->
+                <div id="topRanking"></div>
+            </div>
+
+            <div class="bottom-left-section">
+                <button  id="moreInfo">
+                    <p>More Info!</p>
+                </button>
+            
+            <div id="tab-body" class="side-tab">
+              <div class="model-box">
+                <button class="close-btn">X</button>
+                <h2>Full Ranking</h2>
+                <ul id="fullRanking"></ul>
+              </div>
+            </div>
+            </div>
+        </div>
+
+
+         <div class="right-section">
+            <div class="stickyNote">
+                <button class="stickyNote pNoteBtn">
+                <p>Personal Notepad</p>
+                </button>
+            </div>
+
+            <div class="tab-note hide-note">
+                <button class="shrink-btn">X</button>
+                <h2>Note-taking</h2>
+
+                <form id="form">
+                <!-- creating label and input for country, word searched and ranking -->
+                <label for="country">Country</label>
+                <input type="text" id="country">
+
+                <label for="ranking">Ranking</label>
+                <input type="text" id="ranking">
+
+                <label for="wordSearched">Word Searched</label>
+                <input type="wordSearched" id="wordSearched">
+
+                <!-- save button -->
+                <div class="button-row">
+                    <button id="saveBtn">Save</button>
+                </div>
+                </form>
+
+                <!-- might have to remove
+                <div class="displayNote">
+                    <h2>Saved Note</h2>
+                    <p id="noteDisplay" class="note-display"></p> -->
+
+                <!-- empty div file to contain all notes -->
+                 <div id="note" class="note-container"></div>
+                
+                </div>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

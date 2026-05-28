@@ -114,7 +114,7 @@ async function fetchTrendData(searchTerm) {
   try {
 
     const response = await axios.get(
-      "http://localhost:3000/api/trends",
+      "https://level2finalproject.onrender.com/api/trends",
       {
         params: {
           q: searchTerm,

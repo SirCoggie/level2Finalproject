@@ -53,8 +53,19 @@ app.get("/api/youtubeTrends", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
+
+app.get("/", (req, res)=>{
+  res.send("TrendFinder backend is running!")
+})
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, ()=>{
+  console.log(`Server running on port ${PORT}`)
+})
+
+// app.listen(3000, () => {
+//   console.log("Server running on http://localhost:3000");
+// });
 
 
